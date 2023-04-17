@@ -1,5 +1,11 @@
 package com.example.myapplication;
 
+import static com.example.myapplication.Constants.BUSINESS_SHORT_CODE;
+import static com.example.myapplication.Constants.CALLBACKURL;
+import static com.example.myapplication.Constants.PARTYB;
+import static com.example.myapplication.Constants.PASSKEY;
+import static com.example.myapplication.Constants.TRANSACTION_TYPE;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -21,12 +27,6 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.example.myapplication.Constants.BUSINESS_SHORT_CODE;
-import static com.example.myapplication.Constants.CALLBACKURL;
-import static com.example.myapplication.Constants.PARTYB;
-import static com.example.myapplication.Constants.PASSKEY;
-import static com.example.myapplication.Constants.TRANSACTION_TYPE;
-
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ApiClient mApiClient;
@@ -34,7 +34,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @BindView(R.id.etAmount)
     EditText mAmount;
-    @BindView(R.id.etPhone)EditText mPhone;
+    @BindView(R.id.etPhone)
+    EditText mPhone;
     @BindView(R.id.btnPay)
     Button mPay;
 
