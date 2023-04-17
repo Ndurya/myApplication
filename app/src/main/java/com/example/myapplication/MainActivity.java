@@ -11,9 +11,21 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.myapplication.Model.AccessToken;
+import com.example.myapplication.Model.STKPush;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+import static com.example.myapplication.Constants.BUSINESS_SHORT_CODE;
+import static com.example.myapplication.Constants.CALLBACKURL;
+import static com.example.myapplication.Constants.PARTYB;
+import static com.example.myapplication.Constants.PASSKEY;
+import static com.example.myapplication.Constants.TRANSACTION_TYPE;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
