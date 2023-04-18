@@ -6,30 +6,28 @@ import static com.example.myapplication.Constants.PARTYB;
 import static com.example.myapplication.Constants.PASSKEY;
 import static com.example.myapplication.Constants.TRANSACTION_TYPE;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-
 import android.app.ProgressDialog;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.Model.AccessToken;
 import com.example.myapplication.Model.STKPush;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import timber.log.Timber;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
+import timber.log.Timber;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ApiClient mApiClient;
+    private DarajaApiClient mApiClient;
     private ProgressDialog mProgressDialog;
 
     @BindView(R.id.etAmount)
@@ -46,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
 
         mProgressDialog = new ProgressDialog(this);
-        mApiClient = new ApiClient();
+        mApiClient = new DarajaApiClient();
         mApiClient.setIsDebug(true); //Set True to enable logging, false to disable.
 
         mPay.setOnClickListener(this);
